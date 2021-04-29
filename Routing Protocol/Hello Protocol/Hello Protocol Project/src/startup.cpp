@@ -24,7 +24,9 @@ int main(int argc, char *argv[])
 	std::string routerIP;
 	std::string neighborIP;
 	std::string tempIP;
-	routerIP = argv[1];
+	//routerIP = argv[1];
+	
+	routerIP = getRouterIP ();
 
 	// read the config file and get this router's neighbors
 	readConfigFile (pcGraph);
@@ -46,7 +48,8 @@ int main(int argc, char *argv[])
 	recvACKThread.join();
 
 
-	// if don't receive an ack after a certain amount of time, update graph.
+	// if don't receive an ack after a certain amount of time,
+	// update graph.
 
 
 	delete (pcGraph);

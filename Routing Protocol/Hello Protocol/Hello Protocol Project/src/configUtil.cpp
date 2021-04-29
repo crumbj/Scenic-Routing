@@ -22,7 +22,7 @@
 //********************************************************************'
 std::string getRouterIP ()
 {
-	const char *THIS_INTERFACE = "eth0";
+	const char *THIS_INTERFACE = "br-mng";
 		struct ifaddrs *ifaddr, *ifa;
 		int family, s;
 		char host[NI_MAXHOST];
